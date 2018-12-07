@@ -1,0 +1,37 @@
+[
+	{
+		"value" : 1,
+		"text" : "Monday",
+		"continent" : "Monday"
+	},
+	{
+		"value" : 2,
+		"text" : "Tuesday",
+		"continent" : "Tuesday"
+	},
+	{
+		"value" : 3,
+		"text" : "Wednesday",
+		"continent" : "Wednesday"
+	},
+	{
+		"value" : 4,
+		"text" : "Thursday",
+		"continent" : "Thursday"
+	},
+	{
+		"value" : 5,
+		"text" : "Friday",
+		"continent" : "Friday"
+	},
+	{
+		"value" : 6,
+		"text" : "Saturday",
+		"continent" : "Saturday"
+	},
+	{
+		"value" : 7,
+		"text" : "Sunday",
+		"continent" : "Sunday"
+	}
+]
