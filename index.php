@@ -54,6 +54,7 @@
                                             <div class="card">
                                                 <div class="card-block">
                                                     <form id="new-stream-form" enctype="multipart/form-data">
+                                                        <input type="hidden" name="t" value="<?=$_SESSION['user']['token']?>">
                                                         <h5>How's your pet doing today ?</h5>
                                                         <hr>
                                                         <div class="alert alert-danger" id="err-div" style="display: none;">
@@ -102,8 +103,8 @@
     $.ajax({
         url: '<?=$config['API_ENDPOINT']?>/streams',
         type: 'GET',
-        headers: {
-            "X-SECURE-TOKEN" : "<?=$_SESSION['user']['token']?>"
+        data: {
+            t: "<?=$_SESSION['user']['token']?>"
         }
     })
     .done(function(response) {

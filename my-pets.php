@@ -183,8 +183,8 @@
         $.ajax({
             url: '<?=$config['API_ENDPOINT']?>/pets',
             type: 'GET',
-            headers: {
-                "X-SECURE-TOKEN" : "<?=$_SESSION['user']['token']?>"
+            data: {
+                t : "<?=$_SESSION['user']['token']?>"
             }
         })
         .done(function(response) {
@@ -236,10 +236,8 @@
         $.ajax({
             url: '<?=$config['API_ENDPOINT']?>/pet',
             type: 'POST',
-            headers: {
-                "X-SECURE-TOKEN" : "<?=$_SESSION['user']['token']?>"
-            },
             data: {
+                t: "<?=$_SESSION['user']['token']?>",
                 type: pet_type.val(),
                 colour: pet_colour.val(),
                 quantity: pet_quantity.val()
@@ -283,8 +281,8 @@
         $.ajax({
             url: '<?=$config['API_ENDPOINT']?>/pet/'+id,
             type: 'GET',
-            headers: {
-                "X-SECURE-TOKEN" : "<?=$_SESSION['user']['token']?>"
+            data: {
+                t: "<?=$_SESSION['user']['token']?>"
             }
         })
         .done(function(response) {
@@ -326,10 +324,8 @@
         $.ajax({
             url: '<?=$config['API_ENDPOINT']?>/pet/'+id+'/update',
             type: 'PUT',
-            headers: {
-                "X-SECURE-TOKEN" : "<?=$_SESSION['user']['token']?>"
-            },
             data: {
+                t: "<?=$_SESSION['user']['token']?>",
                 type: pet_type.val(),
                 colour: pet_colour.val(),
                 quantity: pet_quantity.val()
@@ -371,8 +367,8 @@
         $.ajax({
             url: '<?=$config['API_ENDPOINT']?>/pet/'+id+'/delete',
             type: 'DELETE',
-            headers: {
-                "X-SECURE-TOKEN" : "<?=$_SESSION['user']['token']?>"
+            data: {
+                t: "<?=$_SESSION['user']['token']?>"
             }
         })
         .done(function(response) {
